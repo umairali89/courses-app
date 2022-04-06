@@ -14,6 +14,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { ApiService } from './auth/api.service';
 import { CookieService } from 'ngx-cookie-service';
 import { ApiInterceptor } from "./auth/api.interceptor";
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ApiInterceptor } from "./auth/api.interceptor";
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    GraphQLModule,
   ],
   providers: [ApiService, CookieService, {
             provide: HTTP_INTERCEPTORS,
